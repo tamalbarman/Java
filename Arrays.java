@@ -1,31 +1,18 @@
 import java.util.*;
+// Taking an array as an input and printing its elements.
+public class Arrays{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt(); // taken size name varriable
+        int numbers[] = new int[size]; //taken user input array size
 
-public class Arrays {
-    public static void main(String args[])
-    {
-        Scanner sb = new Scanner(System.in);
-        int rows = sb.nextInt();
-        int cols = sb.nextInt();
-
-        int numbers [][] = new int[rows][cols];
-
-        for(int i=0; i<rows;i++)
-        {
-            for(int j=0; j<cols;j++)
-            {
-                numbers[i][j] = sb.nextInt();
-            }
+        for(int i=0; i<size ;i++){
+            numbers[i] = sc.nextInt(); // if user take 3 then the array size will be 0 1 2
         }
-        int x=sb.nextInt();
-        for(int i=0;i<rows;i++)
-        {
-            for(int j=0;j<cols;j++)
-            {
-                if(numbers[i][j]==x)
-                {
-                    System.out.println("X found at location " + i + " " + j + " ");
-                }
-            }
+        // prints the number in the array
+        for(int i = 0 ; i< size;i++){
+            System.out.println(numbers[i] + " ");
+            sc.close();
         }
     }
 }
